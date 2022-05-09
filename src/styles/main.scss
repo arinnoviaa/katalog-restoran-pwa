@@ -1,0 +1,407 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #424242;
+    overflow-x: hidden;
+}
+
+/*
+ * skip to content
+ *
+ */
+
+.skip-link {
+   position: absolute;
+   top: -60px;
+   left: 0;
+   background-color: #8b7bc5;
+   color: white;
+   margin: 15px;
+   font-weight: bold;
+   letter-spacing: .08em;
+   padding: 15px;
+   z-index: 100;
+   text-decoration: none;
+
+}
+ 
+.skip-link:focus {
+   top: 0;
+}
+
+
+/*
+ * Header
+ *
+ */
+
+.header {
+    min-height: 56px;
+    transition: min-height 0.3s;
+
+    &__title {
+        text-align: center;
+        letter-spacing: .03em;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 900;
+        font-size: 4em;
+        margin: 0.5em 0.25em;
+        display: inline-block;
+        color: #970c0c;
+        width: 100%;
+    }
+
+    &__menu {
+        font-size: 32px;
+        border: none;
+        background-color: transparent;
+        margin: 10px auto;
+        display: block;
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/*
+ * Top level navigation
+ */
+.nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        padding: 1.3em;
+        text-decoration: none;
+        color: #616161;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #000;
+    }
+}
+
+    .nav__item {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 24%;
+        text-align: center;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+        .nav__list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+
+
+/*
+ * Jumbotron
+ */
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    background-image: url("../public/images/heros/hero-image_4.jpg");
+    background-position: center;
+    background-color: green;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__inner {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    &__title {
+        color: #fff;
+        font-weight: 500;
+        font-size: 36px;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    &__tagline {
+        background-color: rgb(31, 29, 29);
+        display: block;
+        padding: 30px;
+        color: #fff;
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+
+
+
+/*
+ * main
+ */
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+ * content
+ */
+
+.content {
+    padding: 32px;
+}
+
+/*
+ * latest
+ */
+
+.restaurant{
+    width: 100%;
+    margin: 10em auto;
+    text-align: center;
+
+    &__label {
+        font-size: 32px;
+        font-weight: lighter;
+    }
+
+    &__label::after {
+        content: '';
+        margin-top: 16px;
+        display: block;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    &__list {
+        margin: 32px auto auto;
+        text-align: left;
+    }
+}
+
+/*
+   Like
+*/
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+ * post item
+ */
+
+.list-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    display:block;
+
+    &:hover{
+        transform: scale(1.008);
+        animation: 0.5s ease-in-out;
+    }
+
+    &__content {
+        padding: 16px;
+    }
+
+    &__thumbnail {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__rating {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #999;
+    }
+
+
+    &__title {
+        font-weight: 500;
+        font-size: 16px;
+        margin-top: 16px;
+        transition: 0.3s opacity;
+        display: flex;
+        align-items: center;
+
+        a{
+        padding: 5px; 
+        display: block;
+        min-height: 44px;
+        }
+    }
+
+    &__title:hover {
+        opacity: 0.5;
+
+        & a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__city{
+        position: absolute;
+        background-color:floralwhite;
+        padding: 15px 20%;
+        margin: 10px 0;
+        font-size: 1.5em;
+    }
+
+    &__description {
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 1.5em;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        overflow:hidden;
+        
+    }
+}
+
+.container{
+    background-color: #F2F2F2;
+    padding: 1em 0;
+}
+
+.detail-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.detail-restaurant{
+    display: grid;
+    margin: 3em auto;
+    background-color: #fff;
+    grid: 'poster poster'
+        'info rating';
+    text-align: left;
+
+    &__poster{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        grid-area: poster;
+    }
+
+    &__info, &__rating{
+        margin: 1em;
+    }
+
+    &__info{
+        grid-area: info;
+    }
+
+    &__rating{
+        grid-area: rating;
+        text-align: end;
+        font-size: 1.2em;
+    }
+    
+    &__rating p{
+        background-color: green;
+        padding: .5em;
+        color: white;
+        font-weight: 700;
+        border-radius: 5px;
+        display: inline-block;
+
+    }
+
+    &__name{
+        font-size: 3em;
+        font-weight:500;
+        color: #000;
+    }
+
+    &__city, &__address{
+        margin: .1em 0;
+        font-size: 1.5em;
+    }
+
+    &__city{
+        color: rgb(84, 83, 83);
+    }
+    
+    &__address{
+        color: rgb(109, 106, 106);
+    }
+}
+
+.restaurant-menu{
+    display: grid;
+    grid-gap: 2em;
+    
+    &__description, &__foods, &__drinks{
+        background-color: white;
+        padding: 1em;
+    }
+}
+
+.review{
+    max-width: 800px;
+    background-color: white;
+    margin: 2em 0;
+    padding: 1em;
+
+    &-body{
+        margin: 1em 0;
+    }
+}
+
+
+
+/*
+ * footer
+ */
+
+footer {
+    background-color: #0a0a0a;
+    padding: 3em;
+    width: 100%;
+    text-align: center;
+    color: #eeeeee;
+}
+

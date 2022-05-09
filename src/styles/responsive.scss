@@ -1,0 +1,128 @@
+.restaurant__list {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 499px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        visibility: hidden;
+        z-index: 10;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-500px, 0);
+        transform: translate(-500px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+
+        &__item {
+            display: list-item;
+            border-bottom: 1px solid #E0E0E0;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        visibility: visible;
+    }
+
+
+    
+}
+
+
+@media screen and (min-width: 500px) {
+    .header{
+        &__menu {
+        display: none;
+        }
+    }
+
+    
+    .restaurant-menu{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (min-width: 650px) {
+
+    .list-item{
+        &__content {
+            padding: 16px 32px 32px 32px;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__description {
+            font-size: 14px;
+        }
+    }
+
+    
+
+    
+}
+
+@media screen and (min-width: 700px) {
+    .restaurant__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+
+    .restaurant-menu{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav__list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .restaurant-menu{
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .restaurant__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    
+
+}
+
+@media screen and (min-width: 1200px) {
+    .restaurant__list {
+        max-width: 1200px;
+    }
+
+    .hero{
+      min-width: 1000px;
+      margin: 0 auto;
+
+    }
+}
